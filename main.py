@@ -1,6 +1,14 @@
 import requests
 import time
 import random as rd
+import json
+
+def read_to_json(filename):
+    with open(filename, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+
+    return data
+
 
 
 def catchFish(userId, fishId, transId, token):
@@ -57,15 +65,13 @@ def getFish(token, userId):
 
     print(response.status_code)
     print(response.text)
-    # currentEnergy = 0
     if response.status_code == 200:
         data = response.json()
         transactionId = data['transactionId']
         fishInfoId = data['randomFish']['id']
-        # currentEnergy = data['currentEnergy']
         time.sleep(rd.randint(5,10))
         catchFish(userId, fishInfoId, transactionId, token)
-        # return data
+
 
 
 def main(token):
@@ -104,6 +110,7 @@ def main(token):
 
 
 
-token = 'Bear .....' # Chèn token vào đây 
+accounts = read_to_json("accounts.json")
 
-main(token)
+for token in accounts:
+    main(token)
