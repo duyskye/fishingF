@@ -9,11 +9,13 @@
     cd fishingF
     
 3.Install dependencies:
+
     pip install -r requirements.txt
     
 4.Prepare input files:
 
 Create accounts.json with Bear token.
+
 
 Example accounts.json:
 
