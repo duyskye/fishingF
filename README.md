@@ -1,6 +1,12 @@
 # fishingF
-Lấy token từ web xong chèn vào và chạy thôi
 
+Prepare input files:
 
+Create accounts.json with Bear token.
 
-token = "Bear ..."
+Example accounts.json:
+
+[
+  "Bear .......",
+  "Bear ......."
+]
