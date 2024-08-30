@@ -14,10 +14,14 @@
     
 4.Prepare input files:
 
-Create accounts.json with Bear token.
+Get Bearer token with chrome console (F12)
+
+    'Bearer '+ localStorage.getItem('fishAuth');
+
+Create `accounts.json` with Bearer token.
 
 
-Example accounts.json:
+Example `accounts.json`:
 
     [
 
